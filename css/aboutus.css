@@ -16,27 +16,11 @@ body {
   height: 100vh;
 }
 
-.column {
-  display: flex;
-  grid-template-columns: 1fr;
-  gap: 20px;
+.partner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
-
-.ptfront {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap:20px;
-  width:100%;
-}
-
-.ptafter {
-  display: flex;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  width:100%;
-}
-
 
 .partner1:nth-child(2n+1),
 .partner1:nth-child(2n+2) {
@@ -51,8 +35,8 @@ body {
   position: relative;
   width: 200px;
   height: 250px;
-  background-image: url('photo/shadow3.png');
-  border-radius: 10px;
+  background-image: url('../photo/shadow.png');
+  border-radius: 20px 20px;
   overflow: hidden;
 }
 
@@ -60,6 +44,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  margin: 0 10px;
 }
 
 .partimg {
@@ -97,7 +82,7 @@ body {
 }
 
 .contxt {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -110,4 +95,19 @@ body {
   width: 150px;
   height: 150px;
   background-size: cover;
+}
+
+.front {
+  display: flex;
+
+}
+
+.back {
+  display: flex;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
