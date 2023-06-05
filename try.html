@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>滑動區塊</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .scrollable-row {
+            overflow-x: scroll;
+            white-space: nowrap;
+            -ms-overflow-style: none;  /* IE 10+ */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        .scrollable-row::-webkit-scrollbar { /* WebKit */
+            display: none;
+        }
+        
+        .scrollable-item {
+            display: inline-block;
+            width: 300px;
+            margin-right: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body>
+    <section id='model'>
+        <div class="container">
+            <div class='row'>
+                <div class='col-md-12 text-center'>
+                    <h3>型號展示</h3>
+                    <div class='scrollable-row'>
+                        <div class='scrollable-item'>
+                            <!-- 第一個手機型號 -->
+                            <a href="">sha384-1</a>
+                        </div>
+                        <div class='scrollable-item'>
+                            <!-- 第二個手機型號 -->
+                            <a href="">sha384-1</a>
+                        </div>
+                        <div class='scrollable-item'>
+                            <!-- 第三個手機型號 -->
+                            <a href="">sha384-1</a>
+                        </div>
+                        <div class='scrollable-item'>
+                            <!-- 第三個手機型號 -->
+                            <a href="">sha384-1</a>
+                        </div>
+                        <div class='scrollable-item'>
+                            <!-- 第三個手機型號 -->
+                            <a href="">sha384-1</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script>
+        $(document).ready(function () {
+            $('.scrollable-row').on('mousedown', function (e) {
+                e.preventDefault();
+                $(this).addClass('grabbing');
+                var startX = e.pageX - $(this).scrollLeft();
+                $(this).on('mousemove', function (e) {
+                    var x = e.pageX - startX;
+                    $(this).scrollLeft(x);
+                });
+            }).on('mouseup', function () {
+                $(this).removeClass('grabbing');
+                $(this).off('mousemove');
+            });
+        });
+    </script>
+</body>
+</html>

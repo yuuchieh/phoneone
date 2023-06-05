@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppingcart</title>
+    <link rel="stylesheet" href="css/shoppingcart.css">
+</head>
+
+<body>
+    <div class="cart">
+        <div class="header">
+            <img src="../Final/photo/logo.png" alt="logo" class="logo">
+            <h1>購物車</h1>
+        </div>
+        
+        <div class="cart-item">
+            <img src="product1.jpg" alt="product1">
+            <div class="cartdetails">
+                <div class="ctitle">商品名稱 1</div>
+                <div class="cprice">$10</div>
+            </div>
+            <div class="quantity">
+                <input type="number" min="1" value="1">
+            </div>
+            <div class="subtotal">小計$10</div>
+            <button class="delete-btn">刪除</button>
+        </div>
+        
+        <div class="cart-item">
+            <img src="product2.jpg" alt="product2">
+            <div class="cartdetails">
+                <div class="ctitle">商品名稱 2</div>
+                <div class="cprice">$15</div>
+            </div>
+            <div class="quantity">
+                <input type="number" min="1" value="1">
+            </div>
+            <div class="subtotal">小計$15</div>
+            <button class="delete-btn">刪除</button>
+        </div>
+
+        <div class="shipping">
+            <div class="leftcolumn">
+                <div class="form1">
+                    <label for="recipient">收件人</label>
+                    <input type="text" id="recipient" placeholder="請輸入收件人姓名">
+                </div>
+                <div class="form1">
+                    <label for="contact">聯絡方式</label>
+                    <input type="text" id="contact" placeholder="請輸入聯絡方式">
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="form1">
+                    <label for="send">寄送地址</label>
+                    <select id="send">
+                        <option value="city">台北市</option>
+                        <option value="city">新北市</option>
+                        <option value="city">桃園市</option>
+                        <option value="city">台中市</option>
+                        <option value="city">台南市</option>
+                        <option value="city">高雄市</option>
+                        <option value="city">宜蘭縣</option>
+                        <option value="city">新竹縣</option>
+                        <option value="city">新竹市</option>
+                        <option value="city">苗栗縣</option>
+                        <option value="city">彰化縣</option>
+                        <option value="city">南投縣</option>
+                        <option value="city">雲林縣</option>
+                        <option value="city">嘉義縣</option>
+                        <option value="city">嘉義市</option>
+                        <option value="city">屏東縣</option>
+                        <option value="city">花蓮縣</option>
+                        <option value="city">台東縣</option>
+                        <option value="city">澎湖縣</option>
+                        <option value="city">基隆市</option>
+                    </select>
+                </div>
+                <div class="form1">
+                    <label for="address">地址</label>
+                    <input type="text" id="address" placeholder="請輸入地址">
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="notes">
+            <textarea rows="3" placeholder="請輸入備註"></textarea>
+        </div>
+        
+        
+        
+        <!--新增產品-->
+        
+        <div class="total">總計: $25</div>
+        <a href="" class="checkout-btn" onclick="showAlert()">結帳</a>
+        <a href="" class="checkout-btn">繼續購物</a>
+    </div>
+
+    <script>
+        function showAlert(){
+            alert("感謝您的購買(ﾉ∀`*)~~!請確保您選擇之手機殼與您的手機型號相符!如您有特殊要求或緊急狀況，請與客服聯繫，我們會盡快為您服務~!");
+            window.location.href = "";
+        }
+    </script>
+    
+</body>
+</html>
+
+

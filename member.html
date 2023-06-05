@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/member.css">
+
+    <script>
+      function switchTab(tabId) {
+          const tabs = document.querySelectorAll('.tab');
+          const contents = document.querySelectorAll('.content');
+
+          tabs.forEach((tab) => {
+              if (tab.getAttribute('data-tab') === tabId) {
+                  tab.classList.add('active');
+              } else {
+                  tab.classList.remove('active');
+              }
+          });
+
+          contents.forEach((content) => {
+              if (content.id === tabId) {
+                  content.classList.add('active');
+              } else {
+                  content.classList.remove('active');
+              }
+          });
+      }
+  </script>
+</head>
+<body>
+  <header>
+    <div class='container'>
+      <nav class="navbar navbar-expand-md navbar-light fixed-top header-color">
+      <a class="navbar-brand" href="index.html"><img src='photo/logo.png' width='155'></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link nav-text" href="#intro">首頁</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-text" href="#model">手機模板</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-text" href="#introduction">DALL·E2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-text" href="#email">聯絡我們</a>
+        </li>
+        </ul>
+    
+        <div class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+          <a class="nav-link nav-text" href="login.html">登入</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link nav-text" href="register.html">註冊</a>
+          </li>
+        </ul>
+        </div>
+      </div>
+      </nav>
+    </div>
+  </header>
+  <div class="member">
+    <h1>會員資料</h1>
+    
+    <div class="mgroup">
+        <label for="name">姓名:</label>
+        <input type="text" id="name" name="name" value="Ann">
+    </div>
+    
+    <div class="mgroup">
+        <label for="phone">電話:</label>
+        <input type="text" id="phone" name="phone" value="0909090909">
+    </div>
+    
+    <div class="mgroup">
+      <label for="birthday">生日:</label>
+        <input type="text" id="birthday" name="birthday" value="2002-01-01">
+    </div>
+    
+    <div class="mgroup">
+      <label for="password">密碼變更:</label>
+        <input type="password" id="password" name="password" value="********">
+    </div>
+    
+    <div class="button-container">
+        <button class="button">儲存</button>
+    </div>
+    
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('shopping-history')">歷史訂單</div>
+      <div class="tab" onclick="switchTab('message-history')">評論紀錄</div>
+  </div>
+  
+  <div class="content active" id="shopping-history">
+      <p>購買日期: 2023-05-01</p>
+      <p>商品名稱: 手機殼A</p>
+      <p>金額: $200</p>
+  </div>
+  
+  <div class="content" id="message-history">
+      <p>留言日期: 2023-05-10</p>
+      <p>留言內容: 手機殼我超喜歡的!!!!!符合我的期待!!!!</p>
+  </div>
+</div>
+</body>
+</html>
